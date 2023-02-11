@@ -15,20 +15,20 @@ public abstract class Product {
         this.taxPercent = tax;
 
         if(name == null || name.equals("")){
-            throw new IllegalArgumentException("Product name can not be null");
+            throw new IllegalArgumentException("Product name can not be null or empty");
         }
-        if(name.isEmpty()){
-            throw new IllegalArgumentException("Name can not be empty");
-        }
+        //if(name.isEmpty()){
+          //  throw new IllegalArgumentException("Product name can not be empty");
+        //}
         if(price == null){
             throw new IllegalArgumentException("Price can not be null");
         }
         if(price.compareTo(BigDecimal.ZERO) < 0  ){
             throw new IllegalArgumentException("Price can not be less than 0");
         }
-        if(price.compareTo(BigDecimal.ZERO) < 0  ){
-            throw new IllegalArgumentException("Price can not be less than 0");
-        }
+//        if(price.compareTo(BigDecimal.ZERO) == -1  ){
+//            throw new IllegalArgumentException("Price can not be less than 0");
+//        }
 
     }
 
