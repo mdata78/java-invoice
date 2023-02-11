@@ -17,14 +17,16 @@ public class Invoice {
     }
 
     public BigDecimal getSubtotal() {
-        return null;
+           return BigDecimal.ZERO;
     }
 
     public BigDecimal getTax() {
+
         return null;
     }
 
     public BigDecimal getTotal() {
+
         return null;
     }
 }
