@@ -1,6 +1,7 @@
 package pl.edu.agh.mwo.invoice;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 import org.hamcrest.Matchers;
 import org.junit.Assert;
@@ -125,4 +126,10 @@ public class InvoiceTest {
     public void testAddingNullProduct() {
         invoice.addProduct(null);
     }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testGenerateInvoice() {
+        invoice.addInvoice(null);
+    }
+
 }
